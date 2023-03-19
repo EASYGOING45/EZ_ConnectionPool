@@ -1,6 +1,6 @@
 #项目根目录下的CmakeLists.txt文件
 cmake_minimum_required(VERSION 3.0)
-project(conn_pool)
+project(conn_pool C CXX)
 
 #配置编译选项
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -g -Wall -Werror")
