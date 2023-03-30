@@ -129,6 +129,7 @@ void ConnectionPool::produceConnectionTask()
     }
 }
 
+// 给外部提供接口，从连接池中获取一个可用的空闲连接
 shared_ptr<Connection> ConnectionPool::getConnecction()
 {
     unique_lock<mutex> lock(_queueMutex);
@@ -149,6 +150,7 @@ shared_ptr<Connection> ConnectionPool::getConnecction()
      * shared_ptr智能指针析构时，会把connection资源直接delete掉，相当于调用connection的析构函数，connection就被close掉了。
      * 这里需要自定义shared_ptr的释放资源的方式，把connection直接归还到queue当中，而不是delete掉。
      */
+    // 从队列中取出一个连接 lambda表达式 作为shared_ptr的释放资源的方式
     shared_ptr<Connection> sp(_connectionQue.front(),
                               [&](Connection *pcon)
                               {
@@ -176,7 +178,7 @@ void ConnectionPool::scannerConnectionTask()
         while (_connectionCnt > _initSize)
         {
             Connection *p = _connectionQue.front();
-            if (p->getAliveTime() >= {_maxIdleTime * 1000})
+            if (p->getAliveTime() >= (_maxIdleTime * 1000))
             {
                 _connectionQue.pop();
                 _connectionCnt--;
