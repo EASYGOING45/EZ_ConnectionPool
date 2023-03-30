@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-Connection::COnnection()
+Connection::Connection()
 {
     // 初始化数据库连接
     _conn = mysql_init(nullptr);

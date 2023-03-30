@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/huan/projects/EZ_ConnectionPool/build/src",
+  "command": "/usr/bin/g++  -I/home/huan/projects/EZ_ConnectionPool/include -std=c++11 -g -Wall -Werror -g -o CMakeFiles/Conn_Pool.dir/Connection.cpp.o -c /home/huan/projects/EZ_ConnectionPool/src/Connection.cpp",
+  "file": "/home/huan/projects/EZ_ConnectionPool/src/Connection.cpp"
+},
+{
+  "directory": "/home/huan/projects/EZ_ConnectionPool/build/src",
+  "command": "/usr/bin/g++  -I/home/huan/projects/EZ_ConnectionPool/include -std=c++11 -g -Wall -Werror -g -o CMakeFiles/Conn_Pool.dir/EZ_ConnectionPool.cpp.o -c /home/huan/projects/EZ_ConnectionPool/src/EZ_ConnectionPool.cpp",
+  "file": "/home/huan/projects/EZ_ConnectionPool/src/EZ_ConnectionPool.cpp"
+},
+{
+  "directory": "/home/huan/projects/EZ_ConnectionPool/build/src",
+  "command": "/usr/bin/g++  -I/home/huan/projects/EZ_ConnectionPool/include -std=c++11 -g -Wall -Werror -g -o CMakeFiles/Conn_Pool.dir/main.cpp.o -c /home/huan/projects/EZ_ConnectionPool/src/main.cpp",
+  "file": "/home/huan/projects/EZ_ConnectionPool/src/main.cpp"
+}
+]
